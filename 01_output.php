@@ -58,6 +58,7 @@ like this
   <?php 
 
   echo 5 + 8;
+  echo 8/4;
 
    ?>
 </body>

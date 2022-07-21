@@ -1,0 +1,12 @@
+{
+    "window.zoomLevel": 0,
+    "php.validate.executablePath": "C:\\MAMP\\bin\\php\\php8.0.1\\php.exe",
+    "php.executablePath": "C:\\MAMP\\bin\\php\\php8.0.1\\php.exe",
+    "wrap.with.slot": {
+    
+        "label": "@slot",
+        "description": "@slot...@endslot",
+        "disabled": false,
+        "snippet": "@slot ('$1') \n\t$TM_SELECTED_TEXT\n@endslot$0"
+    }
+}
