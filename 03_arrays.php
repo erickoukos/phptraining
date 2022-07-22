@@ -4,84 +4,108 @@
 /*
   If you need to store multiple values, you can use arrays. Arrays hold "elements"
 */
+// Simple array of strings
+$colors = ['red', 'green', 'blue'];
+echo '<br>';
+echo $colors[0];
+echo '<br>';
+var_dump($colors);
 
 // Simple array of numbers
-$numbers = [1, 2, 3, 4, 5];
 
-// Simple array of strings
-$colors = ['red', 'blue', 'green'];
-
-// Using the array function to create an array of numbers
-$numbers = [1, 2, 3, 4, 5];
-
-// Outputting values from an array
-echo $numbers[0];
-echo $numbers[3] + $numbers[4];
-
-// We can use print_r or var_dump to see the contents of an array
+$numbers = [1, 25, 46, 8, 9, 7];
+echo "<br>";
 var_dump($numbers);
+echo "<br>";
+echo $numbers[5];
 
-/* ------ Associative Arrays ----- */
+$fruits = array('Mangoes', 'Oranges', 'Bananas');
 
-/*
-  Associative arrays allow us to use named keys to identify values.
-*/
+echo "<br>";
+echo "<br>";
 
-$colors = [
-  1 => 'red',
-  2 => 'green',
-  3 => 'blue',
+var_export($fruits);
+
+echo "<br>";
+echo "<br>";
+
+print_r($fruits);
+
+/*ASSOSCIATIVE ARRAYS */
+
+$new_colors =[
+  5 => 'cyan',
+  17 => 'magenta',
+  4 => 'yellow',
+  9 => 'black'
 ];
 
-// echo $colors[1];
-
-// Strings as keys
-$hex = [
-  'red' => '#f00',
-  'green' => '#0f0',
-  'blue' => '#00f',
+$new_streams =[
+  'form_one' => 'cyan',
+  'form_two' => 'magenta',
+  'form_three' => 'yellow',
+  'form_four' => 'black'
 ];
 
-echo $hex['red'];
-var_dump($hex);
+$new_numbers = array(12, 56, 7, 8, 10);
 
-/* ---- Multi-dimensional arrays ---- */
+echo "<br>";
+$result_adds = $numbers[2] + $new_numbers[3];
+echo $result_adds;
 
-/*
-  Multi-dimansional arrays are often used to store data in a table format.
-*/
+/* Multidimensional Arrays - store dat in a table format */
 
-// Single person
-$person1 = [
-  'first_name' => 'Brad',
-  'last_name' => 'Traversy',
-  'email' => 'brad@gmail.com',
+// single person
+
+$person = [
+  'first_name' => 'John',
+  'middle_name' => 'Doe',
+  'email' => 'johndoe@gmail.com',
+  'age' => 18
+];
+
+$person2 = [
+  'first_name' => 'Jane',
+  'middle_name' => 'Doe',
+  'email' => 'janedoe@gmail.com',
+  'age' => 16
 ];
 
 // Array of people
+
+echo '<br>';
+echo '<br>';
 $people = [
-  $person1, //   [...$person1]
-  [
+  $person = [
     'first_name' => 'John',
-    'last_name' => 'Doe',
-    'email' => 'john@gmail.com',
+    'middle_name' => 'Doe',
+    'email' => 'johndoe@gmail.com',
+    'age' => 18
   ],
-  [
+  $person2 = [
     'first_name' => 'Jane',
-    'last_name' => 'Doe',
-    'email' => 'jane@gmail.com',
-  ],
+    'middle_name' => 'Doe',
+    'email' => 'janedoe@gmail.com',
+    'age' => 16
+  ]
 ];
+// var_dump($people);
 
-var_dump($people);
+echo $people[0] ['first_name'];
+echo "<br>";
+echo $people[1] ['email'];
 
-// Accessing values in a multi-dimensional array
-echo $people[0]['first_name'];
-echo $people[2]['email'];
+echo "<br>";
+echo "<br>";
 
-// Encode to JSON
+/*ENCODE TO JSON */
+
 var_dump(json_encode($people));
 
-// Decode from JSON
-$jsonobj = '{"first_name":"Brad","last_name": "Traversy","email":"brad@gmail.com"}';
-var_dump(json_decode($jsonobj));
+/*JSON DECODE */
+echo "<br>";
+echo "<br>";
+$jsonob = '{"first_name":"John","middle_name":"Doe","email":"johndoe@gmail.com","age":18}';
+
+var_dump(json_decode($jsonob));
+

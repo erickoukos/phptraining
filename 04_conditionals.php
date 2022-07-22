@@ -23,75 +23,94 @@ if (condition) {
   // code to be executed if condition is true
 }
 */
+$age = 16;
+$has_id = false;
 
-$age = 20;
-
-if ($age >= 18) {
-  echo 'You are old enough to vote!';
-} else {
-  echo 'Sorry, you are too young to vote.';
+if ($age >= 18 && $has_id){
+  echo 'You are old enough to drive';
+} elseif($age >= 18 && !$has_id){
+  echo 'Visit the persons registrar office for a national ID Immediately!';
+} elseif($age < 18 && $has_id){
+  echo 'Call 911 Immediately!!!';
+}
+else {
+  echo 'Kaa na mama yako!!';
 }
 
 // Dates
-// $today = date("F j, Y, g:i a");
+$today = date("F j, Y, g:i a");
+echo '<br>';
+echo $today;
+echo '<br>';
+echo '<br>';
 
-$t = date('H');
-
-if ($t < 12) {
-  echo 'Have a good morning!';
-} elseif ($t < 17) {
-  echo 'Have a good afternoon!';
-} else {
-  echo 'Have a good evening!';
+$time_of_the_day = date('H');
+$your_name = 'Erick';
+if ($time_of_the_day < 12){
+  echo 'Good morning ' . $your_name . 'have a blessed day!';
+}elseif($time_of_the_day > 12 && $time_of_the_day < 17){
+  echo 'Good afternoon ' . $your_name . ' have a wonderful afternoon!';
+}else{
+  echo "Have a good evening and night ${your_name}";
 }
 
-// Check if an array is empty
-// The isset() function will generate a warning or e-notice when the variable does not exists. The empty() function will not generate any warning or e-notice when the variable does not exists.
+echo '<br>';
+echo '<br>';
+
+/*Checking if a variable is empty */
+// The isset() function will generate a warning or an e-notice when the variable foes not exist. The empty() function will not generate any warning or e-notice when the variable does not exist.
 
 $posts = [];
+$posts[1] = 'Second Post is Here';
+$statuses = [];
 
-if (!empty($posts[0])) {
+if (!empty($posts[0])){
   echo $posts[0];
-} else {
-  echo 'There are no posts';
+}else{
+  echo "Hakuna kitu!";
 }
 
-/* -------- Ternary Operator -------- */
-/*
-  The ternary operator is a shorthand if statement.
-  Ternary Syntax:
-    condition ? true : false;
-*/
+echo '<br>';
+echo '<br>';
 
-// Echo based on a condition (Same as above)
-echo !empty($posts[0]) ? $posts[0] : 'There are no posts';
+if(isset($statuses)){
+  echo $statuses[0];
+}else{
+  echo 'Meme Lord amelala!';
+}
 
-// Assign a variable based on a condition
-$firstPost = !empty($posts[0]) ? $posts[0] : 'There are no posts';
+/*TERNARY OPERATOR */
+echo '<br>';
+echo '<br>';
 
-$firstPost = !empty($posts[0]) ? $posts[0] : null;
+$first_post = !empty($posts[0]) ? $posts[0] : 'Wah! Hakuna kitu!';
+echo $first_post;
 
-// Null Coalescing Operator ?? (PHP 7.4)
-// Will return null if $posts is empty
-// Always returns first parameter, unless first parameter happens to be NULL
-$firstPost = $posts[0] ?? null;
+echo '<br>';
+echo '<br>';
 
-var_dump($firstPost);
+$second_post = !empty($posts[1]) ?? null;
 
-/* -------- Switch Statements ------- */
+// Coalescing operator ?? in php 7.4
+echo $second_post;
 
-$favcolor = 'red';
+echo '<br>';
+echo '<br>';
 
-switch ($favcolor) {
-  case 'red':
-    echo 'Your favorite color is red!';
+/*SWITCH STATEMENTS */
+
+$fav_color = 'Yellow';
+
+switch ($fav_color){
+  case 'Yellow':
+    echo 'Your favorite color is ' . $fav_color;
     break;
-  case 'blue':
-    echo 'Your favorite color is blue!';
+  case 'Blue':
+    echo 'Your favorite color is Blue!';
     break;
-  case 'green':
-    echo 'Your favorite color is green!';
+  case 'Green':
+    echo 'Your favorite color is Green!';
     break;
   default:
-    echo 'Your favorite color is not red, blue, nor green!';
+  echo 'Your favorite color is none of RGBs';
 }
