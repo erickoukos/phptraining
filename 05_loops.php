@@ -10,10 +10,11 @@
   // code to be executed
   }
 */
-
+echo '#######FOR LOOPS####### <br>';
 for ($x = 0; $x <= 10; $x++) {
   echo "Number: $x <br>";
 }
+
 
 /* ------------ While Loop ------------ */
 
@@ -23,13 +24,15 @@ for ($x = 0; $x <= 10; $x++) {
   // code to be executed
   }
 */
+echo '#######WHILE LOOPS####### <br>';
 
-$x = 1;
-
-while ($x <= 5) {
-  echo "Number: $x <br>";
-  $x++;
+$y = 1;
+while ($y <= 5) {
+  echo "Number: $y <br>";
+  $y++;
 }
+
+
 
 /* ---------- Do While Loop --------- */
 
@@ -41,11 +44,16 @@ while ($x <= 5) {
 
 do...while loop will always execute the block of code once, even if the condition is false.
 */
+echo '#######DO ... WHILE LOOPS####### <br>';
 
+$a = 1;
 do {
-  echo "Number: $x <br>";
-  $x++;
-} while ($x <= 5);
+  // code to be executed
+  echo "Number: $a <br>";
+  $a++;
+} while ($a <= 10);
+
+
 
 /* ---------- Foreach Loop ---------- */
 
@@ -58,29 +66,35 @@ do {
 
 // Loop through an array
 
-$numbers = [1, 2, 3, 4, 5];
+echo '#######FOREACH LOOPS####### <br>';
 
-foreach ($numbers as $x) {
-  echo "Number: $x <br>";
+$fruits = ['Mangoes', 'Bananas', 'Oranges', 'Berries', 'Apples'];
+
+foreach ($fruits as $fruit){
+  echo "Fruits: $fruit <br>";
 }
+
 
 // Use the indexes within the loop
 
+echo '###AS INDEX### <br>';
+
 $posts = ['Post One', 'Post Two', 'Post Three'];
 
-foreach ($posts as $index => $post) {
-  echo "${index} - ${post} <br>";
+foreach ($posts as $post){
+  echo "${index} * ${post} <br>";
 }
+
 
 // Use the keys within the loop for an associative array
 
 $person = [
-  'first_name' => 'Brad',
-  'last_name' => 'Traversy',
-  'email' => 'brad@gmail.com',
+  'first_name' => 'Joe',
+  'last_name' => 'Kennedy',
+  'email' => 'kennedyjoe@gmail.com'
 ];
 
-// Get Keys
-foreach ($person as $key => $val) {
-  echo "${key} - ${val} <br>";
+// Get the Keys
+foreach($person as $key => $val){
+  echo "${key} - ${$val} <br>";
 }

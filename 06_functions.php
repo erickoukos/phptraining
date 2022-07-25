@@ -9,49 +9,50 @@
 
   - Functions have their own local scope as opposed to global scope
 */
-
-function registerUser()
+function register_user()
 {
-  echo 'User has been registered!';
+  echo "<h4> User has been registered!</h4>";
 }
+// Running/Calling/Invoking a function
+register_user();
 
-// Running a function
-registerUser();
-
-// Adding params
-function registerUser2($username)
+echo "<br>";
+// Adding args
+function multiply($num1, $num2)
 {
-  echo "User ${username} has been registered!";
+  // Returning values
+  return $num1 * $num2;
 }
-
-// Pass in an argument
-registerUser2('Brad');
-
-// Returning values
-function add($num1, $num2)
-{
-  return $num1 + $num2;
-}
-
-$sum = add(5, 5);
-echo $sum;
+// corresponding params 
+// Pass in params
+echo multiply(12, 10);
 
 // Adding default values
-function subtract($num1 = 10, $num2 = 5)
-{
-  return $num1 - $num2;
+echo "<br>";
+function modulos($b = 10, $c = 3){
+  return $b % $c;
 }
+echo modulos();
 
-echo subtract();
+echo "<br>";
+echo sqrt(16);
 
 // Assigning anonymous functions to variables. Often used for closures and callback functions
-$add = function ($num1, $num2) {
-  return $num1 + $num2;
+echo "<br>";
+$var = function ($x) {
+  return pow($x, 3);
+};
+echo "cube of 3 = " . $var(3);
+
+echo "<br>";
+
+$greeting = function ($jina){
+  echo "Hello $jina";
 };
 
-echo $add(5, 5);
+$greeting('Erick');
 
-// Arrow functions
-$multiply = fn($num1, $num2) => $num1 * $num2;
-
-echo $multiply(5, 5);
+echo "<br>";
+// Arrow Functions
+$subtract = fn($n, $m) => $n + $m;
+echo $subtract(8, 5);
