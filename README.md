@@ -8,3 +8,7 @@ Learn and practice on variables, syntax.
 
 ## Week Two
 ### Continued on Variables, Arrays.
+### Arrays, Functions
+
+## Week Three
+### Array Functions, String Functions
