@@ -8,7 +8,7 @@ Learn and practice on variables, syntax.
 
 ## Week Two
 ### Continued on Variables, Arrays.
-### Arrays, Functions
+### Arrays, Conditionals, Loops, Functions
 
 ## Week Three
 ### Array Functions, String Functions
