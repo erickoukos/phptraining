@@ -36,6 +36,10 @@ echo modulos();
 
 echo "<br>";
 echo sqrt(16);
+echo "<br>";
+// Arrow Function Recap
+$killer_math = fn($b, $n) => pow($b, $n);
+echo $killer_math(2, 5);
 
 // Assigning anonymous functions to variables. Often used for closures and callback functions
 echo "<br>";
@@ -56,3 +60,13 @@ echo "<br>";
 // Arrow Functions
 $subtract = fn($n, $m) => $n + $m;
 echo $subtract(8, 5);
+
+echo "<br>";
+// Anonymous Function 
+
+$say_hello = function($your_name){
+  echo 'Good morning ' . $your_name;
+};
+
+echo $say_hello('John McGreggor');
+
